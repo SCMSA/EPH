@@ -1,0 +1,13 @@
+Package: eph
+Version: 0.1
+Date: 2015-01-01
+Title: Experimental Probabilistic Hypersurface
+Author: Gottfried Berton <Gottfried.Berton@scmsa.eu>
+Maintainer: Gottfried Berton <Gottfried.Berton@scmsa.eu>
+Depends: R (>= 3.1.0)
+Imports: RODBC, tcltk, XLConnect, XLConnectJars, DiceKriging
+Suggests: MASS
+Description: This package aims at reconstructing information. The EPH methods propagates the available information toward unknown points
+License: GPL (>= 2)
+Packaged: 2012-10-29 13:13:01 UTC; ripley
+Repository: CRAN
