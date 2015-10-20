@@ -8,9 +8,9 @@ builds a EPH object
 \arguments{
 	\item{Design}{Points to reconstruct:
 			design.grid is the location of the points to reconstruct, 
-			design.fact is the expected (real) value to the points to reconstruct}
+			design.fact is the location of the point}
 	\item{Response}{Observation point: 
-			respond.grid is the location of the point, 
+			response.grid is the expected (real) value to the points to reconstruct, 
 			response.fact is the value of each observations}
 	\item{Boundaries}{value of the measure at each observation point}
 	\item{BoundariesP}{value of the measure at each observation point}
