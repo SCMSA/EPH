@@ -8,7 +8,7 @@ Gottfried Berton, gottfried.berton at scmsa.eu
 Why should I use it ?
 -----------------------------------------------------------------------
 
-'eph' package runs the experimental probabilistic hypersurface method. This method aim at
+The 'EPH' package runs the experimental probabilistic hypersurface method. This method aim at
 reconstructing or predicting values based on available data. The principle is the propagation of the
 information at observation points toward unknown points. The result obtained for each point to reconstruct
 is a probability density. The importance given to the input data is based on their distance to the point
