@@ -1,7 +1,5 @@
 predict_eph.eph <- function(object, newdata){
 
-  #library(tdisplay)
-  
   # newdata  : design.grid (e.g coordonnées x,y de chaque point à estimer)
   # coordinates of measurement points
   mesures <-object@x
