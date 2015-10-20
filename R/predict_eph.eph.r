@@ -1,5 +1,7 @@
 predict_eph.eph <- function(object, newdata){
 
+  #library(tdisplay)
+  
   # newdata  : design.grid (e.g coordonnées x,y de chaque point à estimer)
   # coordinates of measurement points
   mesures <-object@x
@@ -38,17 +40,22 @@ predict_eph.eph <- function(object, newdata){
       }
     }
   }
-  
   temp <- length(tempon) 
   if (temp!= 0){
     for ( i in 1:temp){
       era=temp+1-i
       # in one dimensional case put
-      # newdata<-matrix(newdata[-tempon[era],])
-      newdata<-newdata[-tempon[era],]
+      if (NofParam==1)
+      {
+        newdata<-matrix(newdata[-tempon[era],])
+      }
+      else
+      {
+        newdata<-newdata[-tempon[era],]
+      }
     }
   }
-  
+   
   NofParam <- ncol(mesures)
   NofMeas <- nrow(mesures)
   NofInk <- nrow(newdata)
@@ -60,7 +67,7 @@ predict_eph.eph <- function(object, newdata){
   dmax=rep(0,NofParam)
   a=matrix (rep(0, NofMeas*NofParam), NofMeas, NofParam)
 
-  # check if there are NaN in the location of measures
+  # check NaNs in the location of measures
   for ( n in 1:NofMeas) { 
     for (k in 1:NofParam) {
       if (is.na(mesures[n,k])==TRUE){
@@ -83,7 +90,7 @@ predict_eph.eph <- function(object, newdata){
     }
   }
   
-  # check NaN in boundaries
+  # check NaNs in boundaries
   for (j in 1:NofInk){
     for (k in 1:NofParam) {
       if (is.na(boundaries[1, k])==TRUE) {
