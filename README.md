@@ -7,7 +7,7 @@ Gottfried Berton, gottfried.berton at scmsa.eu
 Installation
 -----------------------------------------------------------------------
 
-You can install the latest version of the code using the devtools R package.
+You can install the latest version of the code using the `devtools` R package.
 
 ```
 # Install devtools, if you haven't already.
@@ -42,8 +42,8 @@ The user set the following parameters :
 What does the package includes ?
 -----------------------------------------------------------------------
 
-- the function class eph that creates an object of class eph
-- the function predict_eph.eph that estimates the expected value of the probability law, as well as the mediane, quantiles, etc.
+- the function class `eph` that creates an object of class eph
+- the function `predict_eph.eph` that estimates the expected value of the probability law, as well as the mediane, quantiles, etc.
   for each point to reconstruct.
   
 
